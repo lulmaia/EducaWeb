@@ -1,0 +1,14 @@
+# Colocando sql como linguagem no github
+
+*.sql linguist-detectable=true
+*.sql linguist-language=sql
+
+# Convertendo para crlf
+
+*.txt eol=crlf
+*.md eol=crlf
+*.html eol=crlf
+*.css eol=crlf
+*.js eol=crlf
+*.java eol=crlf
+*.sql eol=crlf
