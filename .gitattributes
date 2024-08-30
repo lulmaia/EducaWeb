@@ -12,3 +12,5 @@
 *.js eol=crlf
 *.java eol=crlf
 *.sql eol=crlf
+*.ts eol=crlf
+*.yml eol=crlf
