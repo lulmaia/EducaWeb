@@ -1,0 +1,17 @@
+# Ignorar pastas
+
+**/node_modules
+**/.vscode
+**/.git
+**/.github
+
+# Ignorar artefatos
+
+dist
+build
+
+# Ignorar tipos de arquivos
+
+**/*.md
+**/*.txt
+**/*.sh

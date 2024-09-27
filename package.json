@@ -7,7 +7,9 @@
         "doc": "docs"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier --write .",
+		"check": "prettier --check ."
     },
     "repository": {
         "type": "git",
@@ -15,9 +17,13 @@
     },
     "keywords": [],
     "author": "",
-    "license": "ISC",
+    "license": "",
     "bugs": {
         "url": "https://github.com/lulmaia/EducaWeb/issues"
     },
-    "homepage": "https://github.com/lulmaia/EducaWeb#readme"
+    "homepage": "https://github.com/lulmaia/EducaWeb#readme",
+    "devDependencies": {
+        "prettier": "^3.3.3",
+        "typescript": "^5.6.2"
+    }
 }
