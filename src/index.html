@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EducaWeb Login</title>
+  <link rel="stylesheet" href="Styles/Login.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <div class="logo">
+        <h1><span>Educa</span>Web</h1>
+      </div>
+      <h2>Entre e Explore: Descubra um Mundo de Aprendizado</h2>
+      <p class="welcome-text">Bem-vindo de volta, Faça login para se conectar</p>
+      <form id="loginForm">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="robert.langster@gmail.com" required />
+        <label for="password">Password</label>
+        <div class="password-container">
+          <input
+            type="password"
+            id="password"
+            placeholder="********"
+            required
+          />
+          
+        </div>
+        <div class="remember-container">
+          <input type="checkbox" id="rememberMe" />
+          <label for="rememberMe">Remember me</label>
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+        <div class="button-container">
+          <button type="submit" class="login-btn">Login</button>
+          <button type="button" class="signup-btn">Sign Up</button>
+        </div>
+        <p class="social-login">Ou, login com</p>
+        <div class="social-icons">
+          <a href="#">Facebook</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Google</a>
+        </div>
+      </form>
+    </div>
+    <div class="image-container">
+      <img src="./Image/day66travel.png" alt="Van illustration" />
+    </div>
+  </div>
+  <script src="./Js/script.js"></script>
+</body>
+</html>
