@@ -1,0 +1,114 @@
+/* Navbar */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5DBC4;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.navbar {
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+   
+}
+
+#Union {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    left: 300px;
+    top: 8px;
+}
+
+#Educaweb_logo {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    left: 370px;
+    top: -25px;
+}
+
+.topicos {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+    display: flex; 
+    position: relative;
+    left: 600px;
+    top: -48px;
+    color: #737373;
+}
+
+.topicos li {
+    margin-right: 40px;
+    width: 70px;
+    height: 24px;
+    text-align: center;
+}
+
+#Sair {
+    color: #DD6140;
+    position: relative;
+    left: 1400px;
+    top: -90px;
+    scale: 1.2;
+}
+
+#Botao_Perfil {
+    position: relative;
+    left: 1500px;
+    top: -140px;
+    size: 50px;
+    scale: 1.2;
+}
+
+/* Corpo da Tela */
+
+.Corpo {
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+}
+
+#T1 {
+    font-size:  60px;
+    position: relative;
+    left: 290px;
+    color: #252B42;
+    word-spacing: 10px;
+    line-height: 1.5;
+}
+
+#T2 {
+    font-weight: normal;
+    color: #737373;
+    position: relative;
+    line-height: 1.4;
+    top: -25px;
+    left: 290px;
+    font-size: 25px;
+    word-spacing: 5px;
+}
+
+#Botao_Materiais {
+    margin-left: 430px;
+    margin-top: -10px;
+    scale: 1.2;
+}
+
+#Botao_SobreNos {
+    margin-left: 600px;
+    margin-top: -55px;
+    scale: 1.2;
+
+}
+
+#Img1 {
+margin-left: 1083px;
+margin-top: -496px;
+scale: 1.3 ;
+}
+
