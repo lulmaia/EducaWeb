@@ -1,6 +1,10 @@
-body {
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: Lato, sans-serif;
     color: #848383;
+    box-sizing: content-box;
 }
 
 #Principal {
@@ -24,7 +28,7 @@ body {
 .Texto1 {
     text-align: left;
     position: relative;
-    left: 370px;
+    left: 400px;
     top: 80px;
 }
 
@@ -52,16 +56,16 @@ body {
 
 #botao-texto1 {
     position: relative;
-    margin-top: -40px;
-    width: 250px;
+    margin-top: -50px;
+    width: 260px;
     margin-left: -15px ;
 }
 
 #img-lateral1 {
     position: relative;
-    left: 1150;
+    left: 1250;
     top: -290;
-    scale: 1.2;
+    scale: 1.3;
 }
 
 /* Segundo Texto */
@@ -94,7 +98,7 @@ body {
 
 #img-lateral2 {
     position: relative;
-    left: 350px;
+    right: -370px;
     top: -350;
 }
 
@@ -103,7 +107,7 @@ body {
 .Texto3 {
     text-align: left;
     position: relative;
-    left: 370px;
+    left: 400px;
     top: -250px;
 }
 
@@ -129,7 +133,14 @@ body {
 
 #botao-texto3 {
     position: relative;
-    margin-top: -40px;
-    width: 250px;
+    margin-top: -50px;
+    width: 260px;
     margin-left: -15px ;
 }
+
+#img-lateral3 {
+    position: relative;
+    left: 1250;
+    top: -590;
+    scale: 1.3;
+} 
