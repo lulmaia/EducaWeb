@@ -1,3 +1,135 @@
 body {
-    font-family: L;
+    font-family: Lato, sans-serif;
+    color: #848383;
+}
+
+#Principal {
+    font-family: 'Source Serif Pro', sans-serif;
+    color: black;
+    position: relative;
+    text-align: center;
+    top: 50px;
+    word-spacing: 5px;
+    font-size: 45px;
+}
+
+#Vector {
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+/* Primeiro Texto */
+
+.Texto1 {
+    text-align: left;
+    position: relative;
+    left: 370px;
+    top: 80px;
+}
+
+.Texto1 p {
+    position: relative;
+    top: -30px;
+    font-size: 20px;
+    word-spacing: 1px;
+    line-height: 25px;
+}
+
+#titulo-texto1 {
+    font-family: 'Source Serif Pro', sans-serif;
+    color: black;
+    font-size: 35px;
+    position: relative;
+    font-weight: semi-bold;
+
+}
+
+#seperadador-texto1 {
+    position: relative;
+    top: -30px;
+}
+
+#botao-texto1 {
+    position: relative;
+    margin-top: -40px;
+    width: 250px;
+    margin-left: -15px ;
+}
+
+#img-lateral1 {
+    position: relative;
+    left: 1150;
+    top: -290;
+    scale: 1.2;
+}
+
+/* Segundo Texto */
+
+.Texto2 {
+    text-align: right;
+    margin-right: 400px;
+    margin-top: -200px;
+}
+
+.Texto2 p {
+    position: relative;
+    top: -30px;
+    font-size: 20px;
+    word-spacing: 1px;
+    line-height: 25px;
+}
+
+#titulo-texto2 {
+    font-family: 'Source Serif Pro', sans-serif;
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#separador-texto2 {
+    position: relative;
+    top: -25px;
+}
+
+#img-lateral2 {
+    position: relative;
+    left: 350px;
+    top: -350;
+}
+
+/* Terceiro Texto */
+
+.Texto3 {
+    text-align: left;
+    position: relative;
+    left: 370px;
+    top: -250px;
+}
+
+.Texto3 p {
+    position: relative;
+    top: -30px;
+    font-size: 20px;
+    word-spacing: 1px;
+    line-height: 25px;
+}
+
+#titulo-texto3 {
+    font-family: 'Source Serif Pro', sans-serif;
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#separador-texto3 {
+    position: relative;
+    top: -25px;
+}
+
+#botao-texto3 {
+    position: relative;
+    margin-top: -40px;
+    width: 250px;
+    margin-left: -15px ;
 }
