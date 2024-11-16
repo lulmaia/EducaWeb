@@ -133,5 +133,22 @@ body {
     position: relative;
     top: 38px;
   }
+
+  .admin-link {
+    display: block;
+    text-align: center;
+    color: #ff7a00; /* Matching the color of the other buttons */
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 15px; /* Adds spacing from above buttons */
+    cursor: pointer;
+  }
+  
+  .admin-link:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
   
   
