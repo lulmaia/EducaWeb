@@ -1,3 +1,4 @@
+-- SCRIPT DE CRIACAO DAS TABELAS E COLUNAS DO BANCO DE DADOS DO PROJETO EDUCA WEB --------------------------
 -- CRIANDO A TABELA MATERIA --------------------------------------------------------------------------------
 CREATE TABLE Materia (
     ID_materia INT PRIMARY KEY AUTO_INCREMENT,
