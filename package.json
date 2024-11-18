@@ -9,7 +9,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "format": "prettier --write .",
-		"check": "prettier --check .",
+        "check": "prettier --check .",
         "build": "tsc -b"
     },
     "repository": {
@@ -28,6 +28,8 @@
         "react-dom": "^18.3.1"
     },
     "devDependencies": {
+        "@types/react": "^18.3.12",
+        "@types/react-dom": "^18.3.1",
         "prettier": "^3.3.3",
         "typescript": "^5.6.2"
     }
