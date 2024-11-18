@@ -14,3 +14,5 @@
 *.sql eol=crlf
 *.ts eol=crlf
 *.yml eol=crlf
+*.jsx eol=crlf
+*.tsx eol=crlf
