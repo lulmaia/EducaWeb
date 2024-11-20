@@ -1,0 +1,98 @@
+/* Estilização geral */
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbe8d3;
+  }
+  
+  /* Cabeçalho */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff3e1;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo-img {
+    height: 40px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .profile-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .logout {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .admin-btn {
+    background-color: #a6d6a0;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Conteúdo principal */
+  .main-content {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Cartões de cursos */
+  .courses {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .course-card {
+    background-color: #ffa500; /* Cor de fundo dos cartões */
+    border-radius: 15px;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .course-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .course-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .course-card h3 {
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+  }
