@@ -1,0 +1,119 @@
+css
+
+/* Geral */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9b468;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #ff5722;
+}
+
+.admin-button {
+  background-color: #97d497;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout {
+  color: red;
+  font-weight: bold;
+}
+
+.logout:hover {
+  color: darkred;
+}
+
+/* Painel */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+}
+
+.course-table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.course-table th, .course-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.course-table th {
+  background-color: #f9b468;
+  color: white;
+}
+
+.toggle-visibility {
+  margin-left: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
+}
+
+/* Botões */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.add-button, .delete-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 10px;
+  color: white;
+}
+
+.add-button {
+  background-color: #4caf50;
+}
+
+.delete-button {
+  background-color: #f44336;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
