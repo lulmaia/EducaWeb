@@ -1,0 +1,95 @@
+.recuperar-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  .recuperar-form-container {
+    flex: 1;
+    max-width: 500px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  .recuperar-logo h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .recuperar-highlight {
+    color: #f79c34;
+  }
+  
+  .recuperar-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  
+  .recuperar-text {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 30px;
+  }
+  
+  .recuperar-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .recuperar-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  
+  .recuperar-input {
+    padding: 12px 15px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #f79c34;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+  }
+  
+  .recuperar-btn {
+    background-color: #f79c34;
+    color: white;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .recuperar-btn:hover {
+    background-color: #e0681a;
+  }
+  
+  .recuperar-image-container {
+    flex: 1;
+    background-color: #fde4d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  .recuperar-image {
+    max-width: 90%;
+    height: auto;
+  }
+  

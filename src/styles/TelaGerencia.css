@@ -1,0 +1,94 @@
+.telaGerencia-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.telaGerencia-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f79c34;
+  padding: 10px 20px;
+  color: white;
+}
+
+.telaGerencia-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.telaGerencia-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.telaGerencia-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.telaGerencia-link:hover {
+  text-decoration: underline;
+}
+
+.telaGerencia-admin-button {
+  background-color: #ffffff;
+  color: #f79c34;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.telaGerencia-admin-button:hover {
+  background-color: #fde4d0;
+}
+
+.telaGerencia-logout {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.telaGerencia-logout:hover {
+  text-decoration: underline;
+}
+
+.telaGerencia-main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+}
+
+.telaGerencia-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.telaGerencia-buttons-container {
+  display: flex;
+  gap: 20px;
+}
+
+.telaGerencia-option-button {
+  background-color: #f79c34;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.telaGerencia-option-button:hover {
+  background-color: #e0681a;
+}
