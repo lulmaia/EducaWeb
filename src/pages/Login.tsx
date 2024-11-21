@@ -48,7 +48,7 @@ const Login: React.FC = () => {
             />
           </div>
           <div className="login-button-container">
-            <button type="submit" className="login-btn">Login</button>
+          <Link to="/inicial" className="login-btn">Logar</Link> {/* Link para Cadastro */}
             <Link to="/cadastro" className="signup-btn">Se Cadastrar</Link> {/* Link para Cadastro */}
           </div>
           <Link to="/recuperar-senha" className="forgot-password">
@@ -57,7 +57,7 @@ const Login: React.FC = () => {
         </form>
         <Link to="/loginadm" className="admin-link">
         Sou Admin
-        </Link>;
+        </Link>
         
       </div>
       <div className="login-image-container">

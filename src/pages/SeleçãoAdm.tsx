@@ -1,15 +1,7 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom'; 
-import "../styles/TelaGerencia.css"; // Importação do CSS
+import "../styles/seleçãoAdm.css"; // Importação do CSS
 
-const TelaGerencia: React.FC = () => {
-  const navigate = useNavigate();
-
-  const selectadmClick = () => {
-    navigate("/materia-adm"); // Redireciona para a tela de Perfil
-  };
-
-
+const seleçãoAdm: React.FC = () => {
   return (
     <div className="container">
       <header className="header">
@@ -30,13 +22,16 @@ const TelaGerencia: React.FC = () => {
       </header>
 
       <main className="main">
-        <h1 className="title">Gerenciar Curso</h1>
-        <div className="options-container">
-          <div className="option-card">
-            <h2 onClick={selectadmClick} className="option-title">GERENCIAR CURSOS</h2>
+        <h1 className="title">Painel de Administração</h1>
+        <div className="card-container">
+          <div className="card">
+            <h2 className="card-title">GERENCIAR CURSOS</h2>
           </div>
-          <div className="option-card">
-            <h2 className="option-title">GERENCIAR CADASTROS</h2>
+          <div className="card">
+            <h2 className="card-title">GERENCIAR USUÁRIOS</h2>
+          </div>
+          <div className="card">
+            <h2 className="card-title">RELATÓRIOS</h2>
           </div>
         </div>
       </main>
@@ -44,4 +39,4 @@ const TelaGerencia: React.FC = () => {
   );
 };
 
-export default TelaGerencia;
+export default seleçãoAdm;

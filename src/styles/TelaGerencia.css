@@ -1,94 +1,110 @@
-.telaGerencia-container {
+/* Container Principal */
+.container {
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  background-color: #ffe9d6;
 }
 
-.telaGerencia-header {
+/* Navbar */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f79c34;
-  padding: 10px 20px;
-  color: white;
+  padding: 20px 40px;
+  background-color: #ffffff;
 }
 
-.telaGerencia-logo {
+.logo {
+  display: flex;
+  align-items: center;
   font-size: 24px;
   font-weight: bold;
 }
 
-.telaGerencia-nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.telaGerencia-link {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.telaGerencia-link:hover {
-  text-decoration: underline;
-}
-
-.telaGerencia-admin-button {
-  background-color: #ffffff;
-  color: #f79c34;
-  border: none;
-  padding: 5px 10px;
-  font-size: 14px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.telaGerencia-admin-button:hover {
-  background-color: #fde4d0;
-}
-
-.telaGerencia-logout {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.telaGerencia-logout:hover {
-  text-decoration: underline;
-}
-
-.telaGerencia-main-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  padding: 20px;
-}
-
-.telaGerencia-title {
-  font-size: 28px;
-  margin-bottom: 20px;
+.logoText {
   color: #333333;
 }
 
-.telaGerencia-buttons-container {
+.logoHighlight {
+  color: #f29f05;
+}
+
+.nav {
   display: flex;
   gap: 20px;
 }
 
-.telaGerencia-option-button {
-  background-color: #f79c34;
-  color: white;
-  border: none;
-  padding: 10px 20px;
+.navLink {
+  text-decoration: none;
+  color: #333333;
   font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.telaGerencia-option-button:hover {
-  background-color: #e0681a;
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout {
+  color: #f04c4c;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.profileButton {
+  background-color: #b2e59f;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Conteúdo Principal */
+.main {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 32px;
+  color: #333333;
+  margin-bottom: 40px;
+}
+
+/* Cards de Opções */
+.options-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.option-card {
+  width: 250px;
+  height: 250px;
+  background-color: #f29f05;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.option-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.option-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
 }

@@ -6,6 +6,10 @@ import Cadastro from "./pages/Cadastro";
 import RecuperarSenha from "./pages/RecuperarSenha";
 import LoginADM from "./pages/LoginAdm";
 import TelaGerencia from "./pages/TelaGerencia"; // Importe o componente TelaGerencia
+import TelaInicial from "./pages/TelaInicial"; 
+import SelecaoDeMateria from "./pages/SeleçãoDeMateria";
+import PerfilDoAluno from "./pages/PerfilDoAluno";
+import SeleçãoAdm from "./pages/SeleçãoAdm";
 
 const App: React.FC = () => {
   return (
@@ -17,6 +21,10 @@ const App: React.FC = () => {
         <Route path="/recuperar-senha" element={<RecuperarSenha />} />
         <Route path="/loginadm" element={<LoginADM />} />
         <Route path="/gerenciar" element={<TelaGerencia />} /> {/* Nova rota */}
+        <Route path="/inicial" element={<TelaInicial />} /> {/* Rota da TelaInicial */}
+        <Route path="/materias" element={<SelecaoDeMateria />} />
+        <Route path="/perfil" element={<PerfilDoAluno />} />
+        <Route path="/materia-adm" element={<SeleçãoAdm />} />
       </Routes>
     </Router>
   );

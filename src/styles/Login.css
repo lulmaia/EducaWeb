@@ -117,6 +117,7 @@
   }
   
   .login-btn {
+    text-decoration: none;
     background-color: #f79c34;
     color: white;
   }

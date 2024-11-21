@@ -1,0 +1,129 @@
+.container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffe9d6;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .logoText {
+    color: #333333;
+  }
+  
+  .logoHighlight {
+    color: #f29f05;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logout {
+    color: #f04c4c;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .profileButton {
+    background-color: #b2e59f;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .main {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+  }
+  
+  .content {
+    max-width: 50%;
+  }
+  
+  .welcomeText {
+    color: #84b882;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .title {
+    font-size: 48px;
+    color: #333333;
+    margin: 20px 0;
+  }
+  
+  .description {
+    font-size: 18px;
+    color: #666666;
+    margin-bottom: 30px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .primaryButton {
+    background-color: #b2e59f;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .secondaryButton {
+    background-color: transparent;
+    color: #84b882;
+    border: 2px solid #84b882;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .imageContainer {
+    max-width: 45%;
+  }
+  
+  .image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+  
