@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/seleçãoAdm.css"; // Importação do CSS
+import "../styles/SeleçãoAdm.css"; // Importação do CSS
 
 const seleçãoAdm: React.FC = () => {
   return (
