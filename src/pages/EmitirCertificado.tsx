@@ -1,5 +1,7 @@
 import './Certificado.css';
 import { useNavigate } from "react-router-dom";
+import ImagemCerficado from '/.Image/./Certificado.png' 
+import BotaoCertificado from '/.Image/./Botão baixar Certificado.png'
 
 const Certificado = () => {
   return (
@@ -8,17 +10,12 @@ const Certificado = () => {
         {/* Imagem de fundo ou decorativa */}
         <div className="certificado-header">
           <img 
-            src="/path/to/your/background-image.jpg" 
+            src= "Certificado.png"
             alt="Decoração do certificado" 
             className="imagem-fundo" 
           />
         </div>
 
-        <h1 className="titulo">CERTIFICADO</h1>
-        <p className="descricao">
-          Concluiu a Educação Infantil na escola Borcelle, <br />
-          e recebe esse certificado em reconhecimento do seu desempenho.
-        </p>
 
         {/* Assinaturas */}
         <div className="assinaturas">
