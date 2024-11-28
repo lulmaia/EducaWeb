@@ -21,6 +21,10 @@ const PerfilDoAluno: React.FC = () => {
         navigate("/login");
       }
 
+      const certifClick = () => {
+        navigate("/EmitirCertificado");
+      }
+
   return (
     <div className="container">
       <header className="header">
@@ -44,7 +48,7 @@ const PerfilDoAluno: React.FC = () => {
           <div className="profile-sidebar">
             <div className="profile-picture"></div>
             <p className="profile-info">Sobre mim:</p>
-            <button className="certificates-button">Seus Certificados</button>
+            <button className="certificates-button"onClick={certifClick}>Seus Certificados</button>
           </div>
           <div className="profile-details">
             <div className="detail-item">
