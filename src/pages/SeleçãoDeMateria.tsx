@@ -20,8 +20,9 @@ const SelecaoDeMateria: React.FC = () => {
   return (
     <div className="container">
       {/* Navbar da Tela Inicial */}
-      <header className="header">
+      <header className="header" style={{backgroundColor: '#ffe9d6'}}>
         <div className="logo">
+        <img src="public/image/Header Images/Union.png" alt="" />
           <span className="logoText">Educa</span>
           <span className="logoHighlight">Web</span>
         </div>
@@ -47,37 +48,38 @@ const SelecaoDeMateria: React.FC = () => {
       <main className="main">
         <h1 className="title">Selecione uma Matéria</h1>
         <div className="card-container">
-          {/* Card 1 */}
+          {/* Card 1  <h3 className="card-title">Lógica de Programação</h3> */}
           <div className="card">
             <div className="card-content">
               <img
-                src="/path-to-logic-image.png"
+                src="public/image/selec materia/Materia_Logica.png"
                 alt="Lógica de Programação"
                 className="card-image"
               />
-              <h3 className="card-title">Lógica de Programação</h3>
+              
+
             </div>
           </div>
-          {/* Card 2 */}
+          {/* Card 2  <h3 className="card-title">Informática Básica</h3> */}
           <div className="card">
             <div className="card-content">
               <img
-                src="/path-to-computer-image.png"
+                src="public/image/selec materia/Materia_informatica.png"
                 alt="Informática Básica"
                 className="card-image"
               />
-              <h3 className="card-title">Informática Básica</h3>
+              
             </div>
           </div>
-          {/* Card 3 */}
+          {/* Card 3  <h3 className="card-title">Circuitos Lógicos com Minecraft</h3> */}
           <div className="card">
             <div className="card-content">
               <img
-                src="/path-to-minecraft-image.png"
+                src="public/image/selec materia/Materia_Circuitos.png"
                 alt="Circuitos Lógicos com Minecraft"
                 className="card-image"
               />
-              <h3 className="card-title">Circuitos Lógicos com Minecraft</h3>
+              
             </div>
           </div>
         </div>
