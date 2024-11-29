@@ -62,10 +62,12 @@
   }
 
   .main {
-    display: flex;
+    width: 95vw;
   }
   .main-dividir{
+    width: 95vw;
     display: flex;
+    margin-bottom: -3%;
     margin-top: -3%;
   }
   
@@ -80,7 +82,7 @@
     color: #84b882;
     font-size: 18px;
     font-weight: bold;
-    margin-left: 2%;
+    margin-left: 7%;
   }
   
   .title {
@@ -88,7 +90,7 @@
     color: #333333;
     margin: 20px 0;
     justify-content: flex-start;
-    width: 80%;
+    width: 70%;
 
     
   }
@@ -97,13 +99,12 @@
     font-size: 18px;
     color: #666666;
     margin-bottom: 30px;
-    margin-left: 2%;
+    margin-left: 7%;
   }
   
   .buttons {
-    display: flex;
-    gap: 15px;
-    margin-left: 2%;
+    gap: 5%;
+    margin-left: 7%;
   }
   
   .primaryButton {
@@ -114,6 +115,7 @@
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
+    
   }
   
   .secondaryButton {
@@ -123,7 +125,10 @@
     padding: 10px 22px;
     border-radius: 8px;
     font-size: 16px;
-    cursor: pointer;
+    cursor: pointer;    
+  }
+  .primaryButton, .secondaryButton{
+    margin: 1%;
   }
   
   .imageContainer {
@@ -140,6 +145,7 @@
   @media screen and (max-width: 1050px){
     .main-dividir{
       display: grid;
+      height: 100vh;
     }
     .content{
       flex: 1;
@@ -147,8 +153,15 @@
       margin-left: 10%;
       min-width: 0;
     }
+    .imageContainer{
+      max-width: 80%;
+      margin-left: 10%;
+    }
     .image{
       max-width: 80%;
       margin-left: 10%;
     }
+  }
+  @media screen and (max-width: 850px){
+   
   }

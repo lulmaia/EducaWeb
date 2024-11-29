@@ -37,7 +37,7 @@ const TelaInicial: React.FC = () => {
 
 
 
-      <main className="main" style={{display: 'flex'}}>
+      <main className="main">
         <div className='main-dividir'>
         <div className="content">
           <p className="welcomeText">Bem vindos!</p>
