@@ -1,7 +1,7 @@
 
 import "../styles/Certificado.css"
 import certification from "../image/certification.svg"
-export const Cerificado = () => {
+export const Certificado = () => {
    
     return ( 
         <div className="fundo">

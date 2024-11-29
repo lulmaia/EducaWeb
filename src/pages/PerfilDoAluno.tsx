@@ -22,7 +22,7 @@ const PerfilDoAluno: React.FC = () => {
       }
 
       const certifClick = () => {
-        navigate("/EmitirCertificado");
+        navigate("/Certificado");
       }
 
   return (
