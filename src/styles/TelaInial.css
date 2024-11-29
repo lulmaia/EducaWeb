@@ -1,167 +1,238 @@
 .container {
-    font-family: Arial, sans-serif;
-    display: flex;
-    /*flex-direction: column; */
-    min-height: 100vh;
-    background-color: #ffe9d6;
-  }
+  font-family: Arial, sans-serif;
+  position: relative;
+  min-height: 100vh;
+  background-color: #ffe9d6;
+  overflow: hidden; /* Evita que partes da imagem extrapolem a tela */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #333333;
+  font-size: 18px;
+}
+
+.profile {
+  display: flex;
+  gap: 15px;
+}
+
+.logout {
+  font-size: 16px;
+  color: #FF4500;
+}
+
+.profileButton {
+  font-size: 16px;
+  background-color: #d4f4d7;
+  color: #006400;
+  border-radius: 5px;
+  padding: 5px 15px;
+  border: 1px solid #006400;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  z-index: 1; /* Garante que o texto fique acima da imagem */
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+.primaryButton {
+  background-color: #8FBC8F;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  border: 2px solid #8FBC8F;
+  color: #8FBC8F;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 2%;
+}
+.main{
+  margin-left: 3%;
+}
+.main-dividir{
+  height: 70vh;
+  width: 60%;
+  margin-left: -50%;
+}
+
+.welcomeText{
+  color: #82ae71;;
+  font-size: 24px;
   
+}
+
+.imageContainer {
+  position: absolute; /* Faz a imagem flutuar na tela */
+  bottom: 0; /* Posiciona no canto inferior */
+  right: 0; /* Posiciona no canto direito */
+  z-index: 0; /* Garante que a imagem fique atrás do texto */
+}
+
+.image {
+  max-width: 50vw; /* Aumenta proporcionalmente ao tamanho da tela */
+  max-height: 90vh; /* Limita a altura para não extrapolar a tela */
+  object-fit: cover; /* Ajusta a proporção da imagem */
+}
+
+/* Telas de tamanho médio (tablets, largura até 768px) */
+@media (max-width: 768px) {
+  .container{
+    height: 200vh;
+  }
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
+    flex-direction: column; /* Alinha os elementos em coluna */
+    padding: 15px 20px; /* Reduz o padding */
+    gap: 15px;
   }
-  
+
   .logo {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 24px; /* Diminui o tamanho do logo */
   }
-  
-  .logoText {
-    color: #333333;
-  }
-  
-  .logoHighlight {
-    color: #f29f05;
-  }
-  
+
   .nav {
-    display: flex;
-    gap: 20px;
+    flex-wrap: wrap; /* Permite quebra das opções */
+    gap: 15px;
   }
-  
+
   .navLink {
-    text-decoration: none;
-    color: #333333;
-    font-size: 16px;
+    font-size: 16px; /* Reduz tamanho da fonte dos links */
   }
-  
-  .profile {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .logout {
-    color: #f04c4c;
-    font-size: 14px;
-    text-decoration: none;
-  }
-  
+
   .profileButton {
-    background-color: #b2e59f;
-    color: #ffffff;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
+    padding: 5px 10px; /* Ajusta o tamanho do botão */
     font-size: 14px;
   }
 
   .main {
-    width: 95vw;
+    width: 100vw;
+    height: 180vh;
+    padding: 30px; /* Diminui o padding ao redor */
   }
   .main-dividir{
-    width: 95vw;
-    display: flex;
-    margin-bottom: -3%;
-    margin-top: -3%;
+    margin-top: -80%;
+    display: grid;
+    margin-left: 2%;
+    width: 80%;
   }
-  
-  .content {
-    flex: 1;
-    max-width: 50%;
-    min-width: 0;
-    margin-top: 5%;
-  }
-  
-  .welcomeText {
-    color: #84b882;
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 7%;
-  }
-  
-  .title {
-    font-size: 48px;
-    color: #333333;
-    margin: 20px 0;
-    justify-content: flex-start;
-    width: 70%;
 
-    
+  .title {
+    font-size: 28px; /* Reduz tamanho do título */
   }
-  
+
   .description {
-    font-size: 18px;
-    color: #666666;
-    margin-bottom: 30px;
-    margin-left: 7%;
+    font-size: 16px; /* Diminui o texto descritivo */
   }
-  
-  .buttons {
-    gap: 5%;
-    margin-left: 7%;
+
+  .primaryButton, .secondaryButton {
+    font-size: 14px; /* Ajusta os botões */
+    padding: 8px 16px;
   }
-  
-  .primaryButton {
-    background-color: #b2e59f;
-    color: #ffffff;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    
+  .imageContainer{
+    width: 70%;
+    margin-right: 10%;
   }
-  
-  .secondaryButton {
-    background-color: transparent;
-    color: #84b882;
-    border: 2px solid #84b882;
-    padding: 10px 22px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;    
-  }
-  .primaryButton, .secondaryButton{
-    margin: 1%;
-  }
-  
-  .imageContainer {
-    max-width: 100%;
-    min-width: 0;
-  }
-  
+
   .image {
-    max-width: 90%;
-    margin-left: 10%;
-    border-radius: 16px;
+    max-width: 70vw; /* Reduz o tamanho da imagem */
   }
-  
-  @media screen and (max-width: 1050px){
-    .main-dividir{
-      display: grid;
-      height: 100vh;
-    }
-    .content{
-      flex: 1;
-      max-width: 80%;
-      margin-left: 10%;
-      min-width: 0;
-    }
-    .imageContainer{
-      max-width: 80%;
-      margin-left: 10%;
-    }
-    .image{
-      max-width: 80%;
-      margin-left: 10%;
-    }
+}
+
+/* Telas pequenas (celulares, largura até 480px) */
+@media (max-width: 480px) {
+  .header {
+    align-items: flex-start; /* Realinha os itens à esquerda */
+    gap: 10px;
   }
-  @media screen and (max-width: 850px){
-   
+
+  .logo {
+    font-size: 20px; /* Reduz ainda mais o tamanho do logo */
   }
+
+  .nav {
+    display: none; /* Esconde a barra de navegação se necessário */
+  }
+
+  .profileButton {
+    padding: 5px 8px; /* Ajusta o tamanho do botão */
+    font-size: 12px;
+  }
+
+  .main {
+    padding: 20px; /* Diminui ainda mais o padding */
+  }
+
+  .title {
+    font-size: 24px; /* Reduz o título */
+    text-align: center; /* Centraliza para melhorar a legibilidade */
+  }
+
+  .description {
+    font-size: 14px; /* Diminui o tamanho do texto descritivo */
+    text-align: center;
+  }
+
+  .primaryButton, .secondaryButton {
+    font-size: 12px; /* Ajusta os botões */
+    padding: 6px 12px;
+  }
+
+  .image {
+    max-width: 90vw; /* Aumenta proporcionalmente à tela */
+    max-height: 70vh; /* Limita ainda mais a altura */
+  }
+
+  .imageContainer {
+    bottom: 10px; /* Eleva a imagem ligeiramente */
+    right: 10px;
+  }
+
+  .welcomeText {
+    font-size: 20px; /* Reduz tamanho da saudação */
+  }
+}
+
