@@ -24,7 +24,7 @@ const Home: React.FC = () => {
         </div>
       </div>
       <div className="home-illustration">
-        <img src="Image/Illustration.png" alt="Ilustração Educativa" className="home-image" />
+        <img src="public/image/Illustration.png" alt="Ilustração Educativa" className="home-image" />
       </div>
     </div>
   );

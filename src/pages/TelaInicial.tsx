@@ -19,8 +19,9 @@ const TelaInicial: React.FC = () => {
 
   return (
     <div className="container">
-      <header className="header">
+      <header className="header" style={{backgroundColor: '#ffe9d6'}}>
         <div className="logo">
+          <img src="public/image/Header Images/Union.png" alt="" />
           <span className="logoText">Educa</span>
           <span className="logoHighlight">Web</span>
         </div>
@@ -34,7 +35,10 @@ const TelaInicial: React.FC = () => {
         </div>
       </header>
 
-      <main className="main">
+
+
+      <main className="main" style={{display: 'flex'}}>
+        <div className='main-dividir'>
         <div className="content">
           <p className="welcomeText">Bem vindos!</p>
           <h1 className="title">Primeiros Passos no Saber</h1>
@@ -48,10 +52,11 @@ const TelaInicial: React.FC = () => {
         </div>
         <div className="imageContainer">
           <img
-            src="/path-to-image.jpg" 
+            src="public/image/Header Images/none.png" 
             alt="Estudante sorrindo com livros"
             className="image"
           />
+        </div>
         </div>
       </main>
     </div>

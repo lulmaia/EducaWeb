@@ -61,7 +61,7 @@ const Login: React.FC = () => {
         
       </div>
       <div className="login-image-container">
-        <img src="./Image/day66travel.png" alt="Van illustration" className="login-image" />
+        <img src="public/image/day66travel.png" alt="Van illustration" className="login-image" />
       </div>
     </div>
   );
