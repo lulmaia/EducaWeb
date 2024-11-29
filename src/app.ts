@@ -1,28 +1,25 @@
-import express, { Request, Response, NextFunction } from 'express';
+import express from 'express';
 import dotenv from 'dotenv';
-import connectDB from './config/db';
-import userRoutes from './routes/userRoutes';
+import mongoose from 'mongoose';
+import router from './routes/userRoutes';  // Verifique o caminho para o seu arquivo de rotas
 
+// Carregar variáveis de ambiente
 dotenv.config();
 
 const app = express();
+const port = process.env.PORT || 3000;
 
-// Conectar ao banco de dados
-connectDB();
+app.use(express.json()); // Middleware para parsing de JSON
 
-// Middleware para parsear JSON no corpo da requisição
-app.use(express.json());
+// Conectar ao banco de dados MongoDB
+mongoose.connect(process.env.MONGO_URI!)
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
-// Usar as rotas de usuários
-app.use('/api/users', userRoutes);
+// Usar as rotas definidas no router
+app.use('/', router); // Aqui é onde você registra as rotas
 
-// Middleware de tratamento de erro
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  console.error(err);
-  res.status(500).json({ message: 'Internal Server Error', error: err.message });
-});
-
-const PORT = process.env.PORT || 3000; // Alterado para 3000
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+// Iniciar o servidor
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });

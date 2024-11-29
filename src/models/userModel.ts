@@ -1,13 +1,17 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
-export interface IUser extends Document {
+interface IUser extends Document {
   email: string;
   password: string;
+  resetPasswordToken?: string;
+  resetPasswordExpires?: number;
 }
 
-const userSchema: Schema = new Schema({
+const userSchema = new Schema<IUser>({
   email: { type: String, required: true, unique: true },
-  password: { type: String, required: true }
+  password: { type: String, required: true },
+  resetPasswordToken: { type: String },
+  resetPasswordExpires: { type: Number },
 });
 
 const User = mongoose.model<IUser>('User', userSchema);
