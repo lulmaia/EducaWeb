@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/Home.css"; // Importando o CSS específico para este componente
 
 const Home: React.FC = () => {
+  
   return (
     <div className="home-container">
       <div className="home-content">

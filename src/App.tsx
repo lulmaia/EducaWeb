@@ -10,6 +10,9 @@ import TelaInicial from "./pages/TelaInicial";
 import SelecaoDeMateria from "./pages/SeleçãoDeMateria";
 import PerfilDoAluno from "./pages/PerfilDoAluno";
 import SeleçãoAdm from "./pages/SeleçãoAdm";
+import { Cerificado } from "./pages/Certificado";
+import GerenciamentoDeCurso from "./pages/GerenciamentoCurso";
+
 
 const App: React.FC = () => {
   return (
@@ -25,6 +28,8 @@ const App: React.FC = () => {
         <Route path="/materias" element={<SelecaoDeMateria />} />
         <Route path="/perfil" element={<PerfilDoAluno />} />
         <Route path="/materia-adm" element={<SeleçãoAdm />} />
+        <Route path="/certificado" element={<Cerificado />} />
+        <Route path="/gerenciar-curso" element={<GerenciamentoDeCurso />} />
       </Routes>
     </Router>
   );

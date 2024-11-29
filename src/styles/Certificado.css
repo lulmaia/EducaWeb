@@ -1,0 +1,26 @@
+main{
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  width: 900px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-image: url("certification.svg")}
+
+.fundo{ 
+  display: flex;
+background-color: #F5DBC4;
+min-height: 100vh;
+align-items: center;
+}
+button{
+  
+  font-weight: bold;
+  color: white;
+  padding:  15px 30px;
+  background-color: #96BB7C;
+  margin: auto;
+  border-radius: 10px;
+  border: 1px white;
+}
