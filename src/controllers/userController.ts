@@ -93,12 +93,6 @@ export const requestPasswordReset = async (req: Request, res: Response, next: Ne
     const resetUrl = `http://localhost:3000/reset-password/${resetToken}`;
 
     // Enviar e-mail
-    await transporter.sendMail({
-      to: email,
-      subject: 'Password Reset',
-      html: `<p>You requested a password reset. Click the link below to reset your password:</p>
-             <a href="${resetUrl}">Reset Password</a>`,
-    });
 
     return res.json({ message: 'Password reset email sent' });
   } catch (error) {
@@ -137,6 +131,27 @@ export const resetPassword = async (req: Request, res: Response, next: NextFunct
     await user.save(); // Salvar as mudanças
 
     return res.json({ message: 'Password has been successfully reset' });
+  } catch (error) {
+    next(error);
+  }
+};
+
+
+// Excluir usuário
+export const deleteUser = async (req: Request, res: Response, next: NextFunction): Promise<Response | void> => {
+  const { userId } = req.params;  // O ID do usuário que será excluído pode vir da URL
+
+  try {
+    // Encontrar o usuário pelo ID
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Excluir o usuário
+    await user.deleteOne();
+
+    return res.json({ message: 'User has been successfully deleted' });
   } catch (error) {
     next(error);
   }
