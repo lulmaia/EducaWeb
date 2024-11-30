@@ -1,9 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom'; // Importação do hook useNavigate
 import "../styles/Home.css"; // Importando o CSS específico para este componente
 
-const Home: React.FC = () => {
-  
+const Home: React.FC = () => { 
+    const navigate = useNavigate(); // Instância do hook para navegação
+
+  const saibaClick = () => { 
+    navigate("/inicial");
+  }  
+
   return (
     <div className="home-container">
       <div className="home-content">
@@ -19,7 +25,7 @@ const Home: React.FC = () => {
           <Link to="/login" className="home-button home-button-orange">
             Começar
           </Link>
-          <a href="#" className="home-button home-button-light">
+          <a onClick={saibaClick} className="home-button home-button-light">
             Saiba Mais
           </a>
         </div>

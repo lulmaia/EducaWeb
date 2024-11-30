@@ -15,11 +15,15 @@ const TelaInicial: React.FC = () => {
 
   const loginClick = () => {
     navigate("/login");
-  }
+  };
+
+  const sobreNosClick = () => {
+    navigate("/sobre-nos"); // Redireciona para a tela Sobre Nós
+  };
 
   return (
     <div className="container">
-      <header className="header" style={{backgroundColor: '#ffe9d6'}}>
+      <header className="header" style={{ backgroundColor: '#ffe9d6' }}>
         <div className="logo">
           <img src="public/image/Header Images/Union.png" alt="" />
           <span className="logoText">Educa</span>
@@ -35,28 +39,26 @@ const TelaInicial: React.FC = () => {
         </div>
       </header>
 
-
-
       <main className="main">
-        <div className='main-dividir'>
-        <div className="content">
-          <p className="welcomeText">Bem vindos!</p>
-          <h1 className="title">Primeiros Passos no Saber</h1>
-          <p className="description">
-            Nosso objetivo é tornar a educação online acessível e divertida para todas as crianças.
-          </p>
-          <div className="buttons">
-            <button className="primaryButton" onClick={materiasClicks}>Matérias</button>
-            <button className="secondaryButton">Sobre Nós</button>
+        <div className="main-dividir">
+          <div className="content">
+            <p className="welcomeText">Bem vindos!</p>
+            <h1 className="title">Primeiros Passos no Saber</h1>
+            <p className="description">
+              Nosso objetivo é tornar a educação online acessível e divertida para todas as crianças.
+            </p>
+            <div className="buttons">
+              <button className="primaryButton" onClick={materiasClicks}>Matérias</button>
+              <button className="secondaryButton" onClick={sobreNosClick}>Sobre Nós</button>
+            </div>
           </div>
-        </div>
-        <div className="imageContainer">
-          <img
-            src="public/image/Header Images/none.png" 
-            alt="Estudante sorrindo com livros"
-            className="image"
-          />
-        </div>
+          <div className="imageContainer">
+            <img
+              src="public/image/Header Images/none.png" 
+              alt="Estudante sorrindo com livros"
+              className="image"
+            />
+          </div>
         </div>
       </main>
     </div>
