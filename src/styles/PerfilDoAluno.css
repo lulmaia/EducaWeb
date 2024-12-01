@@ -5,15 +5,17 @@
   flex-direction: column;
   min-height: 100vh;
   background-color: #ffe9d6;
+  align-items: center; /* Centraliza horizontalmente */
 }
 
 /* Navbar */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centraliza a navbar */
   align-items: center;
   padding: 20px 40px;
   background-color: #ffffff;
+  width: 100%; /* Garante que a navbar ocupe toda a largura */
 }
 
 .logo {
@@ -68,6 +70,9 @@
 .main {
   flex: 1;
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
 }
 
 .title {
@@ -80,16 +85,18 @@
 .profile-container {
   display: flex;
   gap: 40px;
+  justify-content: center; /* Centraliza o conteúdo dentro do contêiner */
+  align-items: flex-start; /* Alinha os itens ao topo */
 }
 
 .profile-sidebar {
-  flex: 1;
+  max-width: 400px; /* Limita a largura para melhor centralização */
   background-color: #f4dac5;
   border-radius: 8px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Centraliza os itens dentro da sidebar */
 }
 
 .profile-picture {
@@ -121,7 +128,7 @@
 
 /* Detalhes do perfil */
 .profile-details {
-  flex: 3;
+  max-width: 400px; /* Limita a largura para melhor centralização */
   background-color: #f4dac5;
   border-radius: 8px;
   padding: 20px;
@@ -147,7 +154,7 @@
 @media (max-width: 768px) {
   .header {
       flex-direction: column; /* Muda a direção para coluna em telas pequenas */
-      align-items: flex-start; /* Alinha os itens à esquerda */
+      align-items: center; /* Centraliza os itens */
       padding: 20px; /* Reduz o padding */
   }
 
@@ -158,6 +165,7 @@
 
   .main {
       padding: 20px; /* Reduz o padding do conteúdo principal */
+      align-items: center; /* Centraliza horizontalmente */
   }
 
   .title {
@@ -166,6 +174,7 @@
 
   .profile-container {
       flex-direction: column; /* Muda a direção para coluna em telas pequenas */
+      align-items: center; /* Centraliza os itens */
   }
 
   .profile-sidebar {
