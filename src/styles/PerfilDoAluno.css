@@ -86,7 +86,7 @@
   display: flex;
   gap: 40px;
   justify-content: center; /* Centraliza o conteúdo dentro do contêiner */
-  align-items: flex-start; /* Alinha os itens ao topo */
+  align-items: flex-start; 
 }
 
 .profile-sidebar {
