@@ -17,7 +17,7 @@ const Home: React.FC = () => {
           Bem Vindos ao <span className="home-highlight">EducaWeb</span>
         </h1>
         <p className="home-description">
-          A plataforma de ensino infantil mais intuitiva integra tecnologia e diversão, criando um ambiente de aprendizado fácil e atraente para as crianças. 
+          A plataforma de ensino infantil em tecnologia mais intuitiva integra inovação e diversão, criando um ambiente de aprendizado fácil e atraente para as crianças. 
           Com uma interface simples e colorida, as crianças exploram conteúdos educativos através de jogos e vídeos interativos, tornando o aprendizado uma 
           experiência envolvente. Ao mesmo tempo, pais e educadores acompanham o progresso de forma prática, garantindo um desenvolvimento seguro e estimulante.
         </p>

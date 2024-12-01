@@ -30,7 +30,7 @@ const TelaGerencia: React.FC = () => {
       </header>
 
       <main className="main">
-        <h1 className="title">Gerenciar Curso</h1>
+        <h1 className="title">Gerência</h1>
         <div className="options-container">
           <div className="option-card">
             <h2 onClick={selectadmClick} className="option-title">GERENCIAR CURSOS</h2>

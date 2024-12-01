@@ -38,7 +38,7 @@ const TelaInicial: React.FC = () => {
         </div>
         <nav className="nav">
           <a  onClick={inicialClik} className="navLink">Home</a>
-          <a onClick={materiasClicks} className="navLink">Materiais</a>
+          <a onClick={materiasClicks} className="navLink">Matérias</a>
           <a onClick={sobreNosClick} className="navLink">Sobre</a>
           <a onClick={contatoClik} className="navLink">Contato</a>
         </nav>
@@ -54,7 +54,7 @@ const TelaInicial: React.FC = () => {
             <p className="welcomeText">Bem vindos!</p>
             <h1 className="title">Primeiros Passos no Saber</h1>
             <p className="description">
-              Nosso objetivo é tornar a educação online acessível e divertida para todas as crianças.
+              Nosso objetivo é tornar a educação em tecnologia acessível e divertida para todas as crianças.
             </p>
             <div className="buttons">
               <button  className="primaryButton" onClick={materiasClicks}>Matérias</button>
