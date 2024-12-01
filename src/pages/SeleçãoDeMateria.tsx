@@ -17,6 +17,14 @@ const SelecaoDeMateria: React.FC = () => {
     navigate("/login");
   };
 
+  const sobreNosClick = () => {
+    navigate("/sobre-nos"); // Redireciona para a tela Sobre Nós
+  };
+  
+  const contatoClik = () => {
+    navigate("/contato"); // Redireciona para a tela de Contato
+  }
+
   return (
     <div className="container">
       {/* Navbar da Tela Inicial */}
@@ -33,6 +41,8 @@ const SelecaoDeMateria: React.FC = () => {
           <a href="#" className="navLink">
             Materiais
           </a>
+          <a onClick={sobreNosClick} className="navLink">Sobre</a>
+          <a onClick={contatoClik} className="navLink">Contato</a>
         </nav>
         <div className="profile">
           <a onClick={loginClick} className="logout">
@@ -86,6 +96,7 @@ const SelecaoDeMateria: React.FC = () => {
       </main>
     </div>
   );
+  
 };
 
 export default SelecaoDeMateria;

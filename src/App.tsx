@@ -12,6 +12,7 @@ import PerfilDoAluno from "./pages/PerfilDoAluno";
 import SeleçãoAdm from "./pages/SeleçãoAdm";
 import { Certificado } from "./pages/Certificado";
 import GerenciamentoDeCurso from "./pages/GerenciamentoCurso";
+import SobreNos from "./pages/SobreNos";
 
 
 const App: React.FC = () => {
@@ -30,6 +31,7 @@ const App: React.FC = () => {
         <Route path="/materia-adm" element={<SeleçãoAdm />} />
         <Route path="/certificado" element={<Certificado />} />
         <Route path="/gerenciar-curso" element={<GerenciamentoDeCurso />} />
+        <Route path="/sobre-nos" element={<SobreNos />} />
       </Routes>
     </Router>
   );

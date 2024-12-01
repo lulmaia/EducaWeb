@@ -108,3 +108,55 @@
   text-align: center;
   color: #000000;
 }
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Muda a direção para coluna em telas pequenas */
+    padding: 20px; /* Reduz o padding */
+  }
+
+  .nav {
+    flex-direction: column; /* Muda a direção da nav para coluna */
+    gap: 10px; /* Reduz o espaço entre os links */
+  }
+
+  .main {
+    padding: 20px; /* Reduz o padding do conteúdo principal */
+  }
+
+  .title {
+    font-size: 24px; /* Ajusta o tamanho da fonte */
+    margin-bottom: 20px; /* Ajusta a margem inferior */
+  }
+
+  .options-container {
+    flex-direction: column; /* Muda a direção para coluna em telas menores */
+    gap: 20px; /* Reduz o espaço entre os cards */
+  }
+
+  .option-card {
+    width: 80%; /* Ajusta a largura do card em telas menores */
+    max-width: 300px; /* Define um limite máximo de largura */
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px; /* Ajusta o tamanho da fonte do logo */
+  }
+
+  .navLink {
+    font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+  }
+
+  .profileButton {
+    font-size: 12px; /* Ajusta o tamanho do botão do perfil */
+    padding: 6px 12px; /* Ajusta o padding do botão */
+  }
+
+  .option-title {
+    font-size: 16px; /* Ajusta o tamanho da fonte do título do card */
+  }
+}
