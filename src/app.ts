@@ -1,15 +1,17 @@
+// backend/index.ts
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import cors from 'cors'; // Importando o cors
 import router from './routes/userRoutes';
-import videoRoutes from '../src/routes/videoRoutes';  // Verifique o caminho para o seu arquivo de rotas
+import videoRoutes from './routes/videoRoutes'; // Corrigido o caminho
 
-// Carregar variáveis de ambiente
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(cors()); // Habilitando CORS para permitir requisições do frontend
 app.use(express.json()); // Middleware para parsing de JSON
 
 // Conectar ao banco de dados MongoDB
@@ -19,9 +21,7 @@ mongoose.connect(process.env.MONGO_URI!)
 
 // Usar as rotas definidas no router
 app.use('/', router); // Rotas de usuário
-
-// Registrar as rotas de vídeo com o prefixo /api/videos
-app.use('/api/videos', videoRoutes);  // Aqui é onde você conecta as rotas de vídeos
+app.use('/api/videos', videoRoutes);  // Registrar as rotas de vídeos
 
 // Iniciar o servidor
 app.listen(port, () => {
