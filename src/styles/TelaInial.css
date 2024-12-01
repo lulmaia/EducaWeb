@@ -25,11 +25,17 @@
   display: flex;
   gap: 30px;
 }
+a{
+  cursor: pointer;
+}
 
 .navLink {
   text-decoration: none;
   color: #333333;
   font-size: 18px;
+}
+.navLink:hover{
+  color: orange;
 }
 
 .profile {
@@ -49,6 +55,13 @@
   border-radius: 5px;
   padding: 5px 15px;
   border: 1px solid #006400;
+}
+#perfil-but:hover{
+  background-color: #7ea37e;
+}
+.profileButton, button:hover{
+  background-color: #7ea37e;
+  color: white;
 }
 
 .main {
@@ -71,6 +84,9 @@
   font-size: 18px;
   color: #666666;
   margin-bottom: 30px;
+}
+button{
+  cursor: pointer;
 }
 
 .primaryButton {

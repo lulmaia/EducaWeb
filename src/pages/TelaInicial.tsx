@@ -5,6 +5,10 @@ import "../styles/TelaInial.css"; // Importação do CSS puro
 const TelaInicial: React.FC = () => {
   const navigate = useNavigate(); // Instância do hook para navegação
 
+  const inicialClik = () => {
+    navigate("/inicial");
+  };
+  
   const materiasClicks = () => {
     navigate("/materias"); // Redireciona para a tela de seleção de matérias
   };
@@ -20,6 +24,9 @@ const TelaInicial: React.FC = () => {
   const sobreNosClick = () => {
     navigate("/sobre-nos"); // Redireciona para a tela Sobre Nós
   };
+  const contatoClik = () => {
+    navigate("/contato"); // Redireciona para a tela de Contato
+  }
 
   return (
     <div className="container">
@@ -30,12 +37,14 @@ const TelaInicial: React.FC = () => {
           <span className="logoHighlight">Web</span>
         </div>
         <nav className="nav">
-          <a href="#" className="navLink">Home</a>
+          <a  onClick={inicialClik} className="navLink">Home</a>
           <a onClick={materiasClicks} className="navLink">Materiais</a>
+          <a onClick={sobreNosClick} className="navLink">Sobre</a>
+          <a onClick={contatoClik} className="navLink">Contato</a>
         </nav>
         <div className="profile">
           <a onClick={loginClick} className="logout">Sair</a>
-          <a onClick={perfilClick} className="profileButton">Seu Perfil</a>
+          <a id='perfil-but' onClick={perfilClick} className="profileButton">Seu Perfil</a>
         </div>
       </header>
 
@@ -48,7 +57,7 @@ const TelaInicial: React.FC = () => {
               Nosso objetivo é tornar a educação online acessível e divertida para todas as crianças.
             </p>
             <div className="buttons">
-              <button className="primaryButton" onClick={materiasClicks}>Matérias</button>
+              <button  className="primaryButton" onClick={materiasClicks}>Matérias</button>
               <button className="secondaryButton" onClick={sobreNosClick}>Sobre Nós</button>
             </div>
           </div>

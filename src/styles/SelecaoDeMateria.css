@@ -34,6 +34,9 @@
     display: flex;
     gap: 20px;
   }
+  a, .card-content{
+    cursor: pointer;
+  }
   
   .navLink {
     text-decoration: none;
