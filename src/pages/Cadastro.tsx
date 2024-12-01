@@ -1,16 +1,58 @@
-import React, { FormEvent } from "react";
-import { Link } from "react-router-dom";
-import "../styles/Cadastro.css"; // Importação do CSS modular
+import React, { useState, FormEvent } from "react";
+import axios from "axios";  // Para fazer requisições HTTP
+import { useNavigate } from "react-router-dom";
+import "../styles/Cadastro.css";  // Importação do CSS modular
 
 const Cadastro: React.FC = () => {
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const email = (event.target as HTMLFormElement).email.value;
-    const password = (event.target as HTMLFormElement).password.value;
+  // Definindo os estados para o formulário
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [mensagemErro, setMensagemErro] = useState("");
+  const [mensagemSucesso, setMensagemSucesso] = useState("");
+  const [loading, setLoading] = useState(false);  // Para controle de carregamento
 
-    // Aqui você pode incluir a lógica de cadastro (API ou validação)
-    console.log("Email:", email);
-    console.log("Password:", password);
+  const navigate = useNavigate();  // Para navegar após o sucesso do cadastro
+
+  // Função para tratar o envio do formulário
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    // Validação simples: verificação de campos não preenchidos
+    if (!email || !senha) {
+      setMensagemErro("Todos os campos são obrigatórios.");
+      return;
+    }
+
+    setLoading(true); // Inicia o carregamento
+
+    try {
+      // Enviando dados de cadastro para a API
+      const resposta = await axios.post("http://localhost:3000/register", {
+        email,
+        senha,
+      });
+
+      // Exibindo mensagem de sucesso
+      setMensagemSucesso("Cadastro realizado com sucesso!");
+      setMensagemErro(""); // Limpa qualquer mensagem de erro
+
+      // Redirecionando para a tela de login após o cadastro bem-sucedido
+      setTimeout(() => {
+        navigate("/login");  // Redireciona para a página de login
+      }, 2000);
+    } catch (erro: any) {
+      // Tratamento de erros
+      if (erro.response && erro.response.status === 400) {
+        // Mensagem de erro específica (por exemplo, email já em uso)
+        setMensagemErro(erro.response.data.message || "Erro ao realizar cadastro.");
+      } else {
+        // Mensagem de erro genérica
+        setMensagemErro("Erro ao realizar cadastro. Tente novamente.");
+      }
+      setMensagemSucesso(""); // Limpa qualquer mensagem de sucesso
+    } finally {
+      setLoading(false); // Finaliza o carregamento
+    }
   };
 
   return (
@@ -28,6 +70,8 @@ const Cadastro: React.FC = () => {
             type="email"
             id="email"
             name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="cadastro-input"
             placeholder="Digite seu email"
             required
@@ -37,13 +81,17 @@ const Cadastro: React.FC = () => {
             type="password"
             id="password"
             name="password"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
             className="cadastro-input"
             placeholder="Digite sua senha"
             required
           />
-          <Link to="/login" className="login-btn">
-            Cadastrar
-          </Link>
+          {mensagemErro && <p className="erro">{mensagemErro}</p>}
+          {mensagemSucesso && <p className="sucesso">{mensagemSucesso}</p>}
+          <button type="submit" className="cadastro-btn" disabled={loading}>
+            {loading ? "Cadastrando..." : "Cadastrar"}
+          </button>
         </form>
       </div>
       <div className="cadastro-image-container">
