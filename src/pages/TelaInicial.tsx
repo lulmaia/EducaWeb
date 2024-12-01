@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Importação do hook useNavigate
-import "../styles/TelaInial.css"; // Importação do CSS puro
+import "../styles/TelaInicial.css"; // Importação do CSS puro
 
 const TelaInicial: React.FC = () => {
   const navigate = useNavigate(); // Instância do hook para navegação

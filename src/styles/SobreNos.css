@@ -2,87 +2,129 @@
 
 /* Container principal para a seção educacional */
 .educational-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-    max-width: 1200px; /* Define um limite de largura para o contêiner */
-    background-color: #fff;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    text-align: center;
-  }
-  
-  /* Estilização do título principal */
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #000;
-  }
-  
-  /* Wrapper para organizar os blocos de conteúdo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+  max-width: 1200px; /* Define um limite de largura para o contêiner */
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+/* Estilização do título principal */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+/* Wrapper para organizar os blocos de conteúdo */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%; /* Garante que o wrapper ocupe toda a largura do contêiner */
+}
+
+/* Estilos gerais dos blocos de conteúdo */
+.content-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Inversão do layout para blocos alternados */
+.content-item.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Estilos da área de texto */
+.text-content {
+  max-width: 50%;
+}
+
+/* Título dentro do bloco de texto */
+.text-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Parágrafos dentro do bloco de texto */
+.text-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Botão de chamada para ação */
+.cta-button {
+  background-color: #ffa500;
+  border: none;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Efeito de hover no botão */
+.cta-button:hover {
+  background-color: #cc8400;
+}
+
+/* Estilos para as imagens */
+.image-wrapper {
+  max-width: 50%;
+}
+
+/* Ajuste de tamanho das imagens */
+.image-wrapper img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  /* Ajusta a direção do wrapper em telas menores */
   .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%; /* Garante que o wrapper ocupe toda a largura do contêiner */
+      flex-direction: column; /* Altera para coluna */
   }
-  
-  /* Estilos gerais dos blocos de conteúdo */
+
+  /* Ajusta os itens de conteúdo */
   .content-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.5rem;
+      flex-direction: column; /* Altera para coluna */
+      align-items: center; /* Centraliza os itens */
   }
-  
-  /* Inversão do layout para blocos alternados */
-  .content-item.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  /* Estilos da área de texto */
+
+  /* Ajusta o tamanho da área de texto */
   .text-content {
-    max-width: 50%;
+      max-width: 100%; /* Permite que a área de texto ocupe 100% em telas menores */
   }
-  
-  /* Título dentro do bloco de texto */
-  .text-content h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  /* Parágrafos dentro do bloco de texto */
-  .text-content p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  /* Botão de chamada para ação */
-  .cta-button {
-    background-color: #ffa500;
-    border: none;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 5px;
-  }
-  
-  /* Efeito de hover no botão */
-  .cta-button:hover {
-    background-color: #cc8400;
-  }
-  
-  /* Estilos para as imagens */
+
+  /* Ajuste para as imagens */
   .image-wrapper {
-    max-width: 50%;
+      max-width: 100%; /* Permite que a imagem ocupe 100% em telas menores */
   }
-  
-  /* Ajuste de tamanho das imagens */
-  .image-wrapper img {
-    width: 100%;
-    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  .section-title {
+      font-size: 1.5rem; /* Reduz o tamanho do título */
   }
-  
+
+  .text-content h2 {
+      font-size: 1.25rem; /* Reduz o tamanho do subtítulo */
+  }
+
+  .text-content p {
+      font-size: 0.9rem; /* Reduz o tamanho do parágrafo */
+  }
+
+  .cta-button {
+      padding: 0.5rem 1rem; /* Reduz o padding do botão */
+      font-size: 0.9rem; /* Reduz o tamanho da fonte do botão */
+  }
+}

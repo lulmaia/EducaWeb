@@ -1,145 +1,188 @@
 /* Container principal */
 .container {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #ffe9d6;
-  }
-  
-  /* Navbar */
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffe9d6;
+}
+
+/* Navbar */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logoText {
+  color: #333333;
+}
+
+.logoHighlight {
+  color: #f29f05;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #333333;
+  font-size: 16px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout {
+  color: #f04c4c;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.profileButton {
+  background-color: #b2e59f;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Conteúdo principal */
+.main {
+  flex: 1;
+  padding: 40px;
+}
+
+.title {
+  font-size: 32px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* Estrutura do perfil */
+.profile-container {
+  display: flex;
+  gap: 40px;
+}
+
+.profile-sidebar {
+  flex: 1;
+  background-color: #f4dac5;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-info {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.certificates-button {
+  background-color: #b2e59f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.certificates-button:hover {
+  background-color: #9ccd86;
+}
+
+/* Detalhes do perfil */
+.profile-details {
+  flex: 3;
+  background-color: #f4dac5;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 16px;
+  color: #333333;
+  padding: 8px;
+  background-color: #ffe9d6;
+  border-radius: 4px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #ffffff;
+      flex-direction: column; /* Muda a direção para coluna em telas pequenas */
+      align-items: flex-start; /* Alinha os itens à esquerda */
+      padding: 20px; /* Reduz o padding */
   }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .logoText {
-    color: #333333;
-  }
-  
-  .logoHighlight {
-    color: #f29f05;
-  }
-  
+
   .nav {
-    display: flex;
-    gap: 20px;
+      flex-direction: column; /* Muda a direção da nav para coluna */
+      gap: 10px; /* Reduz o espaço entre os links */
   }
-  
-  .navLink {
-    text-decoration: none;
-    color: #333333;
-    font-size: 16px;
-  }
-  
-  .profile {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .logout {
-    color: #f04c4c;
-    font-size: 14px;
-    text-decoration: none;
-  }
-  
-  .profileButton {
-    background-color: #b2e59f;
-    color: #ffffff;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  /* Conteúdo principal */
+
   .main {
-    flex: 1;
-    padding: 40px;
+      padding: 20px; /* Reduz o padding do conteúdo principal */
   }
-  
+
   .title {
-    font-size: 32px;
-    color: #333333;
-    margin-bottom: 20px;
+      font-size: 24px; /* Ajusta o tamanho da fonte */
   }
-  
-  /* Estrutura do perfil */
+
   .profile-container {
-    display: flex;
-    gap: 40px;
+      flex-direction: column; /* Muda a direção para coluna em telas pequenas */
   }
-  
+
   .profile-sidebar {
-    flex: 1;
-    background-color: #f4dac5;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+      width: 100%; /* Permite que a sidebar ocupe toda a largura */
+      margin-bottom: 20px; /* Adiciona espaçamento inferior */
   }
-  
-  .profile-picture {
-    width: 120px;
-    height: 120px;
-    background-color: #ddd;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  
-  .profile-info {
-    font-size: 16px;
-    color: #333333;
-    margin-bottom: 20px;
-  }
-  
-  .certificates-button {
-    background-color: #b2e59f;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .certificates-button:hover {
-    background-color: #9ccd86;
-  }
-  
-  /* Detalhes do perfil */
+
   .profile-details {
-    flex: 3;
-    background-color: #f4dac5;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+      width: 100%; /* Permite que os detalhes do perfil ocupem toda a largura */
   }
-  
-  .detail-item {
-    display: flex;
-    flex-direction: column;
+
+  .profile-picture {
+      width: 100px; /* Ajusta o tamanho da imagem do perfil */
+      height: 100px; /* Ajusta o tamanho da imagem do perfil */
   }
-  
-  .detail-label {
-    font-size: 16px;
-    color: #333333;
-    padding: 8px;
-    background-color: #ffe9d6;
-    border-radius: 4px;
+
+  .profile-info {
+      font-size: 14px; /* Ajusta o tamanho da fonte */
   }
-  
+}
