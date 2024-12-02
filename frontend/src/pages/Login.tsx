@@ -1,17 +1,49 @@
-import React, { FormEvent } from "react";
-import { Link } from "react-router-dom"; // Importação do Link para navegação
+import React, { FormEvent, useState } from "react";
+import axios from "axios";  // Importando Axios para fazer a requisição HTTP
+import { Link, useNavigate } from "react-router-dom"; // Importação do Link para navegação
 import "../styles/Login.css"; // CSS específico
 
 const Login: React.FC = () => {
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const form = event.target as HTMLFormElement;
-    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
-    const password = (form.elements.namedItem("password") as HTMLInputElement).value;
+  const [email, setEmail] = useState(""); // Estado para armazenar o email
+  const [password, setPassword] = useState(""); // Estado para armazenar a senha
+  const [mensagemErro, setMensagemErro] = useState(""); // Para mensagens de erro
+  const [loading, setLoading] = useState(false); // Para controle de carregamento
 
-    // Lógica para login aqui (API call, validação, etc.)
-    console.log("Email:", email);
-    console.log("Password:", password);
+  const navigate = useNavigate(); // Hook para navegação
+
+  // Função para tratar o envio do formulário
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    // Validação simples: Verificar se os campos estão preenchidos
+    if (!email || !password) {
+      setMensagemErro("Por favor, preencha todos os campos.");
+      return;
+    }
+
+    setLoading(true); // Inicia o carregamento
+
+    try {
+      // Realizando a requisição POST para login
+      const response = await axios.post("http://localhost:3000/login", {
+        email,
+        password,
+      });
+
+      // Se o login for bem-sucedido, você pode salvar o token ou fazer outra ação
+      console.log(response.data); // Exibe a resposta no console
+
+      // Sucesso no login, redireciona para outra página
+      navigate("/inicial"); // Redireciona para a página do usuário autenticado
+
+      // Limpa mensagens de erro em caso de sucesso
+      setMensagemErro("");
+    } catch (error: any) {
+      // Se ocorrer um erro, exibe a mensagem de erro
+      setMensagemErro(error.response?.data?.message || "Erro ao fazer login.");
+    } finally {
+      setLoading(false); // Finaliza o carregamento
+    }
   };
 
   return (
@@ -26,7 +58,7 @@ const Login: React.FC = () => {
         <p className="login-text">
           Seja bem-vindo a EducaWeb, faça login para acessar o conteúdo.
         </p>
-        <form id="loginForm" className="login-form" onSubmit={handleSubmit}>
+        <form className="login-form" onSubmit={handleSubmit}>
           <label htmlFor="email" className="login-label">Email</label>
           <input
             type="email"
@@ -34,6 +66,8 @@ const Login: React.FC = () => {
             name="email"
             className="login-input"
             placeholder="robert.langster@gmail.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)} // Atualiza o valor do email
             required
           />
           <label htmlFor="password" className="login-label">Password</label>
@@ -44,11 +78,16 @@ const Login: React.FC = () => {
               name="password"
               className="login-input"
               placeholder="********"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)} // Atualiza o valor da senha
               required
             />
           </div>
+          {mensagemErro && <p className="erro">{mensagemErro}</p>} {/* Exibe mensagem de erro */}
           <div className="login-button-container">
-          <Link to="/inicial" className="login-btn">Logar</Link> {/* Link para Cadastro */}
+            <button type="submit" className="login-btn" disabled={loading}>
+              {loading ? "Entrando..." : "Logar"} {/* Exibe "Entrando..." enquanto carrega */}
+            </button>
             <Link to="/cadastro" className="signup-btn">Se Cadastrar</Link> {/* Link para Cadastro */}
           </div>
           <Link to="/recuperar-senha" className="forgot-password">
@@ -56,9 +95,8 @@ const Login: React.FC = () => {
           </Link>
         </form>
         <Link to="/loginadm" className="admin-link">
-        Sou Admin
+          Sou Admin
         </Link>
-        
       </div>
       <div className="login-image-container">
         <img src="public/image/day66travel.png" alt="Van illustration" className="login-image" />

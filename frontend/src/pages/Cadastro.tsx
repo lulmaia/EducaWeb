@@ -1,7 +1,13 @@
 import React, { useState, FormEvent } from "react";
-import axios from "axios";  // Para fazer requisições HTTP
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../styles/Cadastro.css";  // Importação do CSS modular
+import "../styles/Cadastro.css"; // Importação do CSS
+
+// Função para validação de email
+const validateEmail = (email: string) => {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+};
 
 const Cadastro: React.FC = () => {
   // Definindo os estados para o formulário
@@ -9,44 +15,51 @@ const Cadastro: React.FC = () => {
   const [senha, setSenha] = useState("");
   const [mensagemErro, setMensagemErro] = useState("");
   const [mensagemSucesso, setMensagemSucesso] = useState("");
-  const [loading, setLoading] = useState(false);  // Para controle de carregamento
+  const [loading, setLoading] = useState(false); // Para controle de carregamento
 
-  const navigate = useNavigate();  // Para navegar após o sucesso do cadastro
+  const navigate = useNavigate(); // Para navegar após o sucesso do cadastro
 
   // Função para tratar o envio do formulário
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    // Validação simples: verificação de campos não preenchidos
+    // Validação simples
     if (!email || !senha) {
       setMensagemErro("Todos os campos são obrigatórios.");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setMensagemErro("Por favor, insira um email válido.");
       return;
     }
 
     setLoading(true); // Inicia o carregamento
 
     try {
-      // Enviando dados de cadastro para a API
+      // Enviando dados para a API
+      const apiUrl = process.env.NODE_ENV === "production" 
+        ? "https://api.educasite.com/register" 
+        : "http://localhost:3000/register";
+
       const resposta = await axios.post("http://localhost:3000/register", {
         email,
-        senha,
+        password: senha, // Renomeando para "password"
       });
 
       // Exibindo mensagem de sucesso
       setMensagemSucesso("Cadastro realizado com sucesso!");
       setMensagemErro(""); // Limpa qualquer mensagem de erro
 
-      // Redirecionando para a tela de login após o cadastro bem-sucedido
+      // Redirecionando para a página de login
       setTimeout(() => {
-        navigate("/login");  // Redireciona para a página de login
+        navigate("/login"); // Redireciona para o login após 2 segundos
       }, 2000);
     } catch (erro: any) {
-      // Tratamento de erros
+      // Tratamento de erro
       if (erro.response && erro.response.status === 400) {
-        // Mensagem de erro específica (por exemplo, email já em uso)
         setMensagemErro(erro.response.data.message || "Erro ao realizar cadastro.");
       } else {
-        // Mensagem de erro genérica
         setMensagemErro("Erro ao realizar cadastro. Tente novamente.");
       }
       setMensagemSucesso(""); // Limpa qualquer mensagem de sucesso
@@ -90,12 +103,12 @@ const Cadastro: React.FC = () => {
           {mensagemErro && <p className="erro">{mensagemErro}</p>}
           {mensagemSucesso && <p className="sucesso">{mensagemSucesso}</p>}
           <button type="submit" className="cadastro-btn" disabled={loading}>
-            {loading ? "Cadastrando..." : "Cadastrar"}
+            {loading ? <span className="spinner"></span> : "Cadastrar"}
           </button>
         </form>
       </div>
       <div className="cadastro-image-container">
-        <img src="public/image/day66travel.png" alt="Van illustration" className="cadastro-image" />
+        <img src="/image/day66travel.png" alt="Van illustration" className="cadastro-image" />
       </div>
     </div>
   );

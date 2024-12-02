@@ -1,24 +1,43 @@
-.recuperar-container {
-  display: flex;
-  height: 100vh;
-  background-color: #f9f9f9;
-  flex-direction: column; /* Muda a direção para coluna em telas pequenas */
+/* RecuperarSenha.css */
+
+/* Variáveis de Cores */
+:root {
+  --primary-color: #f79c34;
+  --secondary-color: #e0681a;
+  --bg-color: #f9f9f9;
+  --form-bg-color: #ffffff;
+  --text-color: #333333;
+  --text-light-color: #555555;
 }
 
+/* Container principal */
+.recuperar-container {
+  display: flex;
+  height: 100vh; /* Garantir que ocupe 100% da altura da tela */
+  width: 100%; /* Garantir que ocupe 100% da largura da tela */
+  background-color: var(--bg-color);
+  flex-direction: row; /* Deixe lado a lado por padrão */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 30px; /* Espaçamento entre o formulário e a imagem */
+}
+
+/* Formulário */
 .recuperar-form-container {
-  flex: 1;
   max-width: 500px;
-  background-color: #ffffff;
+  background-color: var(--form-bg-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  margin: 0 auto; /* Centraliza o formulário */
+  border-radius: 15px;
+  width: 100%;
+  z-index: 1; /* Garantir que o formulário fique sobre a imagem */
 }
 
+/* Logo */
 .recuperar-logo h1 {
   font-size: 28px;
   margin-bottom: 20px;
@@ -27,21 +46,25 @@
 }
 
 .recuperar-highlight {
-  color: #f79c34;
+  color: var(--primary-color);
 }
 
+/* Título principal */
 .recuperar-heading {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #333333;
+  color: var(--text-color);
+  font-weight: 500;
 }
 
+/* Texto informativo */
 .recuperar-text {
   font-size: 14px;
-  color: #555555;
+  color: var(--text-light-color);
   margin-bottom: 30px;
 }
 
+/* Formulário (inputs e labels) */
 .recuperar-form {
   display: flex;
   flex-direction: column;
@@ -50,7 +73,7 @@
 .recuperar-label {
   font-size: 14px;
   font-weight: bold;
-  color: #333333;
+  color: var(--text-color);
   text-align: left;
   margin-bottom: 5px;
 }
@@ -59,14 +82,19 @@
   padding: 12px 15px;
   font-size: 14px;
   margin-bottom: 20px;
-  border: 1px solid #f79c34;
+  border: 1px solid var(--primary-color);
   border-radius: 5px;
   width: 100%;
   outline: none;
 }
 
+.recuperar-input:focus {
+  border-color: var(--secondary-color);
+}
+
+/* Botão */
 .recuperar-btn {
-  background-color: #f79c34;
+  background-color: var(--primary-color);
   color: white;
   padding: 12px 15px;
   font-size: 16px;
@@ -77,53 +105,131 @@
 }
 
 .recuperar-btn:hover {
-  background-color: #e0681a;
+  background-color: var(--secondary-color);
 }
 
+/* Imagem */
 .recuperar-image-container {
   flex: 1;
   background-color: #fde4d0;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%; /* Garantir que a imagem ocupe toda a altura disponível */
+  position: absolute; /* Faz a imagem se posicionar atrás do formulário */
+  top: 0;
+  left: 0;
 }
 
 .recuperar-image {
-  max-width: 90%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz com que a imagem cubra toda a área sem ser distorcida */
+  object-position: center; /* Centraliza a imagem */
 }
 
 /* Media Queries para Responsividade */
-@media (max-width: 768px) {
+
+/* Para telas menores que 1024px */
+@media (max-width: 1024px) {
   .recuperar-container {
-      flex-direction: column; /* Muda a direção para coluna em telas pequenas */
+    flex-direction: column; /* Muda para coluna em telas menores */
+    gap: 20px; /* Reduz o espaço entre o formulário e a imagem */
   }
 
   .recuperar-form-container {
-      max-width: 90%; /* Permite que o formulário ocupe mais largura em telas pequenas */
-      padding: 20px; /* Reduz o padding */
+    max-width: 90%; /* Permite que o formulário ocupe mais largura em telas pequenas */
+    padding: 20px; /* Reduz o padding */
   }
 
   .recuperar-logo h1 {
-      font-size: 24px; /* Ajusta o tamanho da fonte */
+    font-size: 24px;
   }
 
   .recuperar-heading {
-      font-size: 18px; /* Ajusta o tamanho da fonte */
+    font-size: 18px;
   }
 
   .recuperar-text {
-      font-size: 12px; /* Ajusta o tamanho da fonte */
+    font-size: 12px;
   }
 
   .recuperar-btn {
-      font-size: 14px; /* Ajusta o tamanho do botão */
-      padding: 10px; /* Ajusta o padding do botão */
+    font-size: 14px;
+    padding: 10px;
   }
-  
+
   .recuperar-image-container {
-      padding: 20px; /* Adiciona um padding para a imagem */
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .recuperar-image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+  .recuperar-logo h1 {
+    font-size: 22px;
+  }
+
+  .recuperar-heading {
+    font-size: 16px;
+  }
+
+  .recuperar-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .recuperar-form-container {
+    padding: 15px;
+  }
+
+  .recuperar-input {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .recuperar-image-container {
+    display: none; /* Oculta a imagem em telas muito pequenas */
+  }
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+  .recuperar-logo h1 {
+    font-size: 20px;
+  }
+
+  .recuperar-heading {
+    font-size: 14px;
+  }
+
+  .recuperar-text {
+    font-size: 11px;
+  }
+
+  .recuperar-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .recuperar-form-container {
+    padding: 15px;
+  }
+
+  .recuperar-input {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .recuperar-image-container {
+    display: none; /* Oculta a imagem em telas muito pequenas */
   }
 }

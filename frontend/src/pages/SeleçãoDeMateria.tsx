@@ -28,7 +28,7 @@ const SelecaoDeMateria: React.FC = () => {
   return (
     <div className="container">
       {/* Navbar da Tela Inicial */}
-      <header className="header" style={{backgroundColor: '#ffe9d6'}}>
+      <header className="header">
         <div className="logo">
         <img src="public/image/Header Images/Union.png" alt="" />
           <span className="logoText">Educa</span>
