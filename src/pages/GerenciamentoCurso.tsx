@@ -11,7 +11,7 @@ const GerenciamentoCurso: React.FC = () => {
 
   return (
     <div className="conteinerCurso">
-         <nav className="nav">
+        <nav className="nav">
           <a href="#" className="navLink">Home</a>
           <a onClick={materiasClicks} className="navLink">Materiais</a>
         </nav>

@@ -95,7 +95,7 @@ const Cadastro: React.FC = () => {
         </form>
       </div>
       <div className="cadastro-image-container">
-        <img src="./Image/day66travel.png" alt="Van illustration" className="cadastro-image" />
+        <img src="public/image/day66travel.png" alt="Van illustration" className="cadastro-image" />
       </div>
     </div>
   );

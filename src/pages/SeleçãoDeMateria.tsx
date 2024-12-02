@@ -39,7 +39,7 @@ const SelecaoDeMateria: React.FC = () => {
             Home
           </a>
           <a href="#" className="navLink">
-            Materiais
+            Matérias
           </a>
           <a onClick={sobreNosClick} className="navLink">Sobre</a>
           <a onClick={contatoClik} className="navLink">Contato</a>
@@ -74,7 +74,7 @@ const SelecaoDeMateria: React.FC = () => {
           <div className="card">
             <div className="card-content">
               <img
-                src="public/image/selec materia/Materia_informatica.png"
+                src="public/image/selec materia/Materia_Informatica.png"
                 alt="Informática Básica"
                 className="card-image"
               />
