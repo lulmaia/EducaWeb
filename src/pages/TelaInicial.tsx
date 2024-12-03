@@ -39,7 +39,7 @@ const TelaInicial: React.FC = () => {
         <nav className="nav">
           <a  onClick={inicialClik} className="navLink">Home</a>
           <a onClick={materiasClicks} className="navLink">Matérias</a>
-          <a onClick={sobreNosClick} className="navLink">Sobre</a>
+          <a onClick={sobreNosClick} className="navLink">Sobre nós</a>
           <a onClick={contatoClik} className="navLink">Contato</a>
         </nav>
         <div className="profile">
