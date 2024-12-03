@@ -4,14 +4,12 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
 import RecuperarSenha from "./pages/RecuperarSenha";
-import LoginADM from "./pages/LoginAdm";
 import TelaGerencia from "./pages/TelaGerencia"; // Importe o componente TelaGerencia
 import TelaInicial from "./pages/TelaInicial"; 
 import SelecaoDeMateria from "./pages/SeleçãoDeMateria";
 import PerfilDoAluno from "./pages/PerfilDoAluno";
 import SeleçãoAdm from "./pages/SeleçãoAdm";
 import { Certificado } from "./pages/Certificado";
-import GerenciamentoDeCurso from "./pages/GerenciamentoCurso";
 import SobreNos from "./pages/SobreNos";
 
 
@@ -23,14 +21,12 @@ const App: React.FC = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/recuperar-senha" element={<RecuperarSenha />} />
-        <Route path="/loginadm" element={<LoginADM />} />
         <Route path="/gerenciar" element={<TelaGerencia />} /> {/* Nova rota */}
         <Route path="/inicial" element={<TelaInicial />} /> {/* Rota da TelaInicial */}
         <Route path="/materias" element={<SelecaoDeMateria />} />
         <Route path="/perfil" element={<PerfilDoAluno />} />
         <Route path="/materia-adm" element={<SeleçãoAdm />} />
         <Route path="/certificado" element={<Certificado />} />
-        <Route path="/gerenciar-curso" element={<GerenciamentoDeCurso />} />
         <Route path="/sobre-nos" element={<SobreNos />} />
       </Routes>
     </Router>
