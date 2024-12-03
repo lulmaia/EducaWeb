@@ -8,7 +8,6 @@ import TelaGerencia from "./pages/TelaGerencia"; // Importe o componente TelaGer
 import TelaInicial from "./pages/TelaInicial"; 
 import SelecaoDeMateria from "./pages/SeleçãoDeMateria";
 import PerfilDoAluno from "./pages/PerfilDoAluno";
-import SeleçãoAdm from "./pages/SeleçãoAdm";
 import { Certificado } from "./pages/Certificado";
 import SobreNos from "./pages/SobreNos";
 
@@ -25,7 +24,6 @@ const App: React.FC = () => {
         <Route path="/inicial" element={<TelaInicial />} /> {/* Rota da TelaInicial */}
         <Route path="/materias" element={<SelecaoDeMateria />} />
         <Route path="/perfil" element={<PerfilDoAluno />} />
-        <Route path="/materia-adm" element={<SeleçãoAdm />} />
         <Route path="/certificado" element={<Certificado />} />
         <Route path="/sobre-nos" element={<SobreNos />} />
       </Routes>
