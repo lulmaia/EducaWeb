@@ -55,10 +55,6 @@ const Login: React.FC = () => {
             Recuperar Senha
           </Link>
         </form>
-        <Link to="/loginadm" className="admin-link">
-        Sou Admin
-        </Link>
-        
       </div>
       <div className="login-image-container">
         <img src="public/image/day66travel.png" alt="Van illustration" className="login-image" />
