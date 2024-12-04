@@ -13,6 +13,8 @@ import SeleçãoAdm from "./pages/SeleçãoAdm";
 import { Certificado } from "./pages/Certificado";
 import GerenciamentoDeCurso from "./pages/GerenciamentoCurso";
 import SobreNos from "./pages/SobreNos";
+import TelaVideoBasica from "./pages/TelaVideoBasica";
+import TelaVideoMine from "./pages/TelaVideoMine";
 
 
 const App: React.FC = () => {
@@ -32,6 +34,8 @@ const App: React.FC = () => {
         <Route path="/certificado" element={<Certificado />} />
         <Route path="/gerenciar-curso" element={<GerenciamentoDeCurso />} />
         <Route path="/sobre-nos" element={<SobreNos />} />
+        <Route path="/TelaVideoBasica" element={<TelaVideoBasica />} />
+        <Route path="/TelaVideoMine" element={<TelaVideoMine />} />
       </Routes>
     </Router>
   );

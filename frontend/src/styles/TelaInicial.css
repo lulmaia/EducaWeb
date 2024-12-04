@@ -7,61 +7,64 @@
   overflow: hidden; /* Evita que partes da imagem extrapolem a tela */
 }
 
-/* Navbar */
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: white; /* Altera a cor de fundo da navbar */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave à navbar */
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  font-size: 28px;
-  font-weight: bold;
-  color: #006400;
+  margin-right: 50px;  
 }
+
+.logo img {
+  width: 3rem;
+  margin-right: 10px;
+}
+
+.logo .logoText {
+  font-size: 2rem;
+}
+
+.logo .logoHighlight {
+  /* Suas propriedades aqui */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
 
 .nav {
   display: flex;
   gap: 30px;
+  margin-right: 500px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 a {
   cursor: pointer;
 }
 
-.navLink {
-  text-decoration: none;
-  color: #333333;
-  font-size: 18px;
-}
-
-.navLink:hover {
-  color: orange;
-}
-
 .profile {
   display: flex;
   gap: 15px;
+  margin-right: 100px;
 }
 
-.logout {
-  font-size: 16px;
-  color: #FF4500;
+.profile .profileButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 50px;
+  font-size: 20px;
 }
 
-.profileButton {
-  font-size: 16px;
-  background-color: #d4f4d7;
-  color: #006400;
-  border-radius: 5px;
-  padding: 5px 15px;
-  border: 1px solid #006400;
+.profile .logout {
+  font-size: 20px;
 }
+
 
 #perfil-but:hover {
   background-color: #7ea37e;
@@ -73,7 +76,6 @@ button:hover {
   color: white;
 }
 
-/* Main Section */
 .main {
   display: flex;
   flex-direction: column;
@@ -124,13 +126,9 @@ button {
 }
 
 .main-dividir {
-  height: auto; /* Ajusta a altura automaticamente */
-  width: 80%; /* Ajusta a largura para ocupar mais espaço */
-  max-width: 1200px; /* Define um limite de largura máxima */
-  margin: 0 auto; /* Centraliza a seção */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 70vh;
+  width: 60%;
+  margin-left: -50%;
 }
 
 .welcomeText {
@@ -147,8 +145,9 @@ button {
 
 .image {
   max-width: 50vw; /* Aumenta proporcionalmente ao tamanho da tela */
-  max-height: 60vh; /* Limita a altura para não extrapolar a tela */
+  max-height: 90vh; /* Limita a altura para não extrapolar a tela */
   object-fit: cover; /* Ajusta a proporção da imagem */
+  width: 1500px;
 }
 
 /* Telas de tamanho médio (tablets, largura até 768px) */
@@ -185,21 +184,11 @@ button {
 
   .imageContainer {
     display: none; /* Esconde a imagem em telas menores */
-  }
-
-  .main-dividir {
-    flex-direction: column; /* Empilha o conteúdo verticalmente */
-    width: 90%; /* Ajusta a largura em telas pequenas */
-    margin-left: 0; /* Remove a margem negativa */
-  }
-
-  .image {
-    max-width: 100%; /* Ajusta a imagem para ocupar toda a largura */
-    height: auto;
+    size: 50px;
   }
 }
 
-/* Telas pequenas (celulares, largura até 480px) */
+/* Telas pequenas (cel ulares, largura até 480px) */
 @media (max-width: 480px) {
   .header {
     padding: 10px 15px; /* Reduz ainda mais o padding */
@@ -224,11 +213,9 @@ button {
   }
 
   .main-dividir {
-    width: 100%; /* Ajusta a largura em telas muito pequenas */
+    width: 90%; /* Aumenta a largura em telas pequenas */
+    margin-left: 0; /* Remove a margem negativa */
   }
 
-  .image {
-    max-width: 100%; /* Ajusta a imagem para ocupar toda a largura */
-    height: auto;
-  }
+
 }
