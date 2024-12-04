@@ -1,0 +1,118 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.home-content {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 50px;
+}
+
+.home-title {
+  font-size: 36px;
+  color: #2e2e2e;
+  margin-bottom: 20px;
+}
+
+.home-highlight {
+  color: #f79c34; /* Cor específica para o "EducaWeb" */
+}
+
+.home-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite os botões quebrarem para a linha seguinte em telas pequenas */
+}
+
+.home-button {
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-button-orange {
+  background-color: #f79c34;
+  color: #fff;
+}
+
+.home-button-orange:hover {
+  background-color: #e0681a;
+}
+
+.home-button-light {
+  background-color: #f1f1f1;
+  color: #555;
+}
+
+.home-button-light:hover {
+  background-color: #ddd;
+}
+
+.home-illustration {
+  text-align: center;
+}
+
+.home-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 28px; /* Reduz o tamanho da fonte em telas médias */
+    margin-bottom: 15px;
+  }
+
+  .home-description {
+    font-size: 14px; /* Reduz o tamanho do texto */
+    margin-bottom: 20px;
+  }
+
+  .home-buttons {
+    flex-direction: column; /* Empilha os botões em telas menores */
+    gap: 10px;
+  }
+
+  .home-button {
+    width: 100%; /* Torna os botões de largura total */
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 24px; /* Reduz ainda mais o título */
+  }
+
+  .home-description {
+    font-size: 12px; /* Reduz ainda mais o texto */
+  }
+
+  .home-buttons {
+    gap: 8px;
+  }
+
+  .home-button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}

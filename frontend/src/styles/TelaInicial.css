@@ -1,0 +1,221 @@
+/* Container Principal */
+.container {
+  font-family: Arial, sans-serif;
+  position: relative;
+  min-height: 100vh;
+  background-color: #ffe9d6;
+  overflow: hidden; /* Evita que partes da imagem extrapolem a tela */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  margin-right: 50px;  
+}
+
+.logo img {
+  width: 3rem;
+  margin-right: 10px;
+}
+
+.logo .logoText {
+  font-size: 2rem;
+}
+
+.logo .logoHighlight {
+  /* Suas propriedades aqui */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+
+.nav {
+  display: flex;
+  gap: 30px;
+  margin-right: 500px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a {
+  cursor: pointer;
+}
+
+.profile {
+  display: flex;
+  gap: 15px;
+  margin-right: 100px;
+}
+
+.profile .profileButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.profile .logout {
+  font-size: 20px;
+}
+
+
+#perfil-but:hover {
+  background-color: #7ea37e;
+}
+
+.profileButton,
+button:hover {
+  background-color: #7ea37e;
+  color: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  z-index: 1; /* Garante que o texto fique acima da imagem */
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 18px;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.primaryButton {
+  background-color: #8FBC8F;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  border: 2px solid #8FBC8F;
+  color: #8FBC8F;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 2%;
+}
+
+.main {
+  margin-left: 3%;
+}
+
+.main-dividir {
+  height: 70vh;
+  width: 60%;
+  margin-left: -50%;
+}
+
+.welcomeText {
+  color: #82ae71;
+  font-size: 24px;
+}
+
+.imageContainer {
+  position: absolute; /* Faz a imagem flutuar na tela */
+  bottom: 0; /* Posiciona no canto inferior */
+  right: 0; /* Posiciona no canto direito */
+  z-index: 0; /* Garante que a imagem fique atrás do texto */
+}
+
+.image {
+  max-width: 50vw; /* Aumenta proporcionalmente ao tamanho da tela */
+  max-height: 90vh; /* Limita a altura para não extrapolar a tela */
+  object-fit: cover; /* Ajusta a proporção da imagem */
+  width: 1500px;
+}
+
+/* Telas de tamanho médio (tablets, largura até 768px) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Alinha os elementos em coluna */
+    padding: 15px 20px; /* Reduz o padding */
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 24px; /* Diminui o tamanho do logo */
+  }
+
+  .nav {
+    flex-wrap: wrap; /* Permite quebra das opções */
+    gap: 15px;
+  }
+
+  .navLink {
+    font-size: 16px; /* Reduz tamanho da fonte dos links */
+  }
+
+  .profileButton {
+    padding: 5px 10px; /* Ajusta o tamanho do botão */
+    font-size: 14px;
+  }
+
+  .main {
+    width: 100vw;
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    padding: 30px; /* Diminui o padding ao redor */
+  }
+
+  .imageContainer {
+    display: none; /* Esconde a imagem em telas menores */
+    size: 50px;
+  }
+}
+
+/* Telas pequenas (cel ulares, largura até 480px) */
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 15px; /* Reduz ainda mais o padding */
+  }
+
+  .navLink {
+    font-size: 14px; /* Diminui o tamanho da fonte dos links */
+  }
+
+  .title {
+    font-size: 28px; /* Diminui o tamanho do título */
+  }
+
+  .description {
+    font-size: 16px; /* Diminui o tamanho da descrição */
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    padding: 8px 15px; /* Ajusta o padding dos botões */
+    font-size: 14px; /* Diminui o tamanho da fonte dos botões */
+  }
+
+  .main-dividir {
+    width: 90%; /* Aumenta a largura em telas pequenas */
+    margin-left: 0; /* Remove a margem negativa */
+  }
+
+
+}

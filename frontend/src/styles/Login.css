@@ -1,0 +1,191 @@
+/* Container Principal */
+.login-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+/* Container do Formulário */
+.login-form-container {
+  flex: 1;
+  max-width: 500px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin: auto; /* Centraliza o formulário */
+}
+
+/* Estilos do Logo */
+.login-logo h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.login-highlight {
+  color: #f79c34;
+}
+
+.login-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.login-text {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+/* Formulário de Login */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.login-input {
+  padding: 12px 15px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #f79c34;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-container input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.password-container .toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #555555;
+}
+
+.remember-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.forgot-password {
+  margin-top: 10px;
+  color: #f79c34;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn {
+  background-color: #f79c34;
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: #e0681a;
+}
+
+.signup-btn {
+  background-color: #f1f1f1;
+  color: #555555;
+}
+
+.signup-btn:hover {
+  background-color: #ddd;
+}
+
+.admin-link {
+  font-size: 14px;
+  color: #f79c34;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.admin-link:hover {
+  text-decoration: underline;
+}
+
+/* Container da Imagem */
+.login-image-container {
+  flex: 1;
+  background-color: #fde4d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.login-image {
+  max-width: 90%;
+  height: auto;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column; /* Muda a direção para coluna em telas pequenas */
+  }
+
+  .login-form-container {
+    max-width: 100%; /* Permite que o formulário ocupe toda a largura */
+    padding: 20px; /* Reduz o padding */
+    border-radius: 15px; /* Mantém bordas arredondadas em telas pequenas */
+  }
+
+  .login-image-container {
+    display: none; /* Esconde a imagem em telas menores */
+  }
+}
+
+@media (min-width: 769px) {
+  .login-container {
+    flex-direction: row; /* Mantém a direção em linha em telas maiores */
+  }
+}

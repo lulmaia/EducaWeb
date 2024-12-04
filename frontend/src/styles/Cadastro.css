@@ -1,0 +1,186 @@
+.cadastro-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f9f9f9; /* Cor de fundo */
+  overflow: hidden; /* Previne rolagem desnecessária */
+  flex-wrap: wrap; /* Permite o conteúdo "quebrar" em dispositivos pequenos */
+}
+
+.cadastro-form-container {
+  flex: 1;
+  max-width: 500px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin: 10px;
+}
+
+.cadastro-logo h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: left;
+  color: #333333; /* Cor do título */
+}
+
+.cadastro-highlight {
+  color: #f79c34; /* Destaque laranja */
+}
+
+.cadastro-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333333; /* Texto escuro */
+}
+
+.cadastro-text {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cadastro-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.cadastro-input {
+  padding: 12px 15px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #f79c34;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cadastro-input:focus {
+  border-color: #e0681a; /* Cor ao focar no campo */
+  box-shadow: 0 0 5px rgba(240, 120, 40, 0.4); /* Efeito visual ao focar */
+}
+
+.cadastro-btn {
+  background-color: #f79c34;
+  color: white;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cadastro-btn:hover {
+  background-color: #e0681a; /* Cor ao passar o mouse */
+  transform: scale(1.02); /* Leve crescimento ao passar o mouse */
+}
+
+.cadastro-btn:active {
+  transform: scale(0.98); /* Leve redução ao clicar */
+}
+
+.cadastro-image-container {
+  flex: 1;
+  background-color: #fde4d0; /* Fundo da imagem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden; /* Previne elementos fora do limite */
+  margin: 10px;
+}
+
+.cadastro-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.cadastro-image:hover {
+  transform: scale(1.05); /* Zoom leve ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cadastro-container {
+    flex-direction: column; /* Empilha os elementos em telas menores */
+    height: auto; /* Permite altura ajustável */
+  }
+
+  .cadastro-form-container {
+    max-width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+  }
+
+  .cadastro-logo h1 {
+    font-size: 24px;
+  }
+
+  .cadastro-heading {
+    font-size: 18px;
+  }
+
+  .cadastro-text {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .cadastro-input {
+    font-size: 16px;
+  }
+
+  .cadastro-btn {
+    font-size: 14px;
+  }
+
+  .cadastro-image-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .cadastro-image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+  .cadastro-logo h1 {
+    font-size: 20px;
+  }
+
+  .cadastro-btn {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .cadastro-heading {
+    font-size: 16px;
+  }
+
+  .cadastro-text {
+    font-size: 10px;
+  }
+
+  .cadastro-input {
+    font-size: 14px;
+  }
+}

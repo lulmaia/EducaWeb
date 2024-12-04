@@ -1,0 +1,181 @@
+/* Estilos Globais */
+.container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffe9d6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logoText {
+  color: #333333;
+}
+
+.logoHighlight {
+  color: #f29f05;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+a, .card-content {
+  cursor: pointer;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #333333;
+  font-size: 16px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout {
+  color: #f04c4c;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.profileButton {
+  background-color: #b2e59f;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Conteúdo Principal */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  padding: 40px;
+  width: 100%; /* Garante que a largura ocupe 100% da tela */
+  box-sizing: border-box; /* Certifica-se de que o padding não afete a largura */
+}
+
+.title {
+  font-size: 32px;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo dos Cards */
+.card-container {
+  display: flex;
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1000px; /* Define um limite para a largura máxima */
+  width: 100%; /* Faz com que a container ocupe a largura total disponível */
+  margin-top: 30px; /* Dá um espaço entre o título e os cards */
+}
+
+.card {
+  width: 250px;
+  height: 350px;
+  background-color: #f29f05;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-image {
+  width: 200px;
+  height: 330px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Muda a direção para coluna em telas pequenas */
+    padding: 20px; /* Reduz o padding */
+  }
+
+  .nav {
+    flex-direction: column; /* Muda a direção da nav para coluna */
+    gap: 10px; /* Reduz o espaço entre os links */
+  }
+
+  .main {
+    padding: 20px; /* Reduz o padding do conteúdo principal */
+  }
+
+  .title {
+    font-size: 24px; /* Ajusta o tamanho da fonte */
+    margin-bottom: 20px; /* Ajusta a margem inferior */
+  }
+
+  .card {
+    width: 80%; /* Ajusta a largura do card em telas menores */
+    max-width: 300px; /* Define um limite máximo de largura */
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+
+  .card-image {
+    width: 100%; /* Ajusta a largura da imagem do card */
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px; /* Ajusta o tamanho da fonte do logo */
+  }
+
+  .navLink {
+    font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+  }
+
+  .profileButton {
+    font-size: 12px; /* Ajusta o tamanho do botão do perfil */
+    padding: 6px 12px; /* Ajusta o padding do botão */
+  }
+
+  .card-title {
+    font-size: 16px; /* Ajusta o tamanho da fonte do título do card */
+  }
+}
